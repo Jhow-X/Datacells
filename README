@@ -1,0 +1,56 @@
+# Datacells
+
+Projeto para aquisição automática de uma fonte de dados sobre covid 19 e visualização dos dados
+
+## Jobs ETL
+
+A psata Jobs contém dois arquivos com Jobs ETL, para automatizar o processo de aquisição e limpeza dos dados(no contexto definido pela equipe)
+### Para agendar os jobs automáticamente basta seguir o seguinte processo:
+
+```bash
+contrab -e
+```
+e adicionar:
+
+```text
+* 10 * * * /usr/bin/python3 path-to-job1.py
+```
+para criar um processo automático que funcionará a cada 10 minutos rodando o script job1.py
+
+## Dependências
+
+### interface
+
+para rodar o notebook do projeto é necessário o [jupyter notebook](https://jupyter.org/)
+
+```bash
+pip install jupyterlab
+```
+```bash
+pip install notebook
+```
+ou alternativamente via [conda.](https://conda-forge.org/)
+
+### bibliotecas usadas
+* pandas
+* fitter
+* plotly
+* scipy
+* statsmodels
+* pylab
+* numpy
+* matplotlib
+* seaborn
+
+
+Em casos de erros na hora de rodar alguma função, provavelmente devido a dependencias, basta instalar elas usando o pip normalmente.
+
+## Rodando o projeto
+
+Para rodar o projeto basta usar o comando
+
+```bash
+jupyter notebook
+```
+
+Que abrirá uma guia no browser, depois basta escolher o diretório do Notebooks/Datacells_notebook.ipynb e se os passos ateriores forem feitos corretamente o projeto já deverá funcionar normalmente 
